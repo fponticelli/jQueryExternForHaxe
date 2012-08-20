@@ -32,16 +32,16 @@ extern class JQuerypp extends JQuery
 	@:overload(function(name : String, value : String, ?options : { ?expires : Date, ?domain : String, ?path : String, ?secure : Bool }) : Void {})
 	static function cookie(name : String, value : String, ?options : { ?expires : Int, ?domain : String, ?path : String, ?secure : Bool }) : Void;
 
-	@:overload(function(height : Float) : Void {})
+	@:overload(function(height : Float) : JQuerypp {})
 	override function innerHeight() : Int;
 
-	@:overload(function(height : Float, ?includeMargin : Bool) : Void {})
+	@:overload(function(height : Float, ?includeMargin : Bool) : JQuerypp {})
 	override function outerHeight(?includeMargin : Bool) : Int;
 
-	@:overload(function(width : Float) : Void {})
+	@:overload(function(width : Float) : JQuerypp {})
 	override function innerWidth() : Int;
 
-	@:overload(function(width : Float, ?includeMargin : Bool) : Void {})
+	@:overload(function(width : Float, ?includeMargin : Bool) : JQuerypp {})
 	override function outerWidth(?includeMargin : Bool) : Int;
 
 
@@ -170,7 +170,7 @@ extern class JQuerypp extends JQuery
 	function swipeup(handler : Event -> Void) : JQuerypp;
 	function swipedown(handler : Event -> Void) : JQuerypp;
 
-	inline static function pp(jQ : js.JQuery) : JQuerypp untyped { return jQ; }
+	inline static function pp(jQ : JQuery) : JQuerypp untyped { return jQ; }
 }
 
 extern class HoverAPI {
