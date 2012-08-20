@@ -196,7 +196,8 @@ extern class JQuery implements ArrayAccess<Dom> {
 		Get the value of a style property for the first element in the set of matched elements.
 	**/
 	@:overload(function(attributeName:String, valueOrFunction:Dynamic):JQuery{})
-	public function css(attributeName:String):String;
+	@:overload(function(attributeName:String):String{})
+	public function css(map:{}):JQuery;
 	
 	#if !JQUERY_NO_DEPRECATED
 	inline public function cssSet(attributeName:String, valueOrFunction:Dynamic):JQuery {

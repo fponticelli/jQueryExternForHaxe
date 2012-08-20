@@ -44,6 +44,7 @@ extern class JQuerypp extends JQuery
 	@:overload(function(width : Float, ?includeMargin : Bool) : Void {})
 	override function outerWidth(?includeMargin : Bool) : Int;
 
+
 	/**
 	jQuery.formParams adds $.fn.formParams which serializes a form into a JavaScript object. It creates nested objects by using bracket notation in the form element name. If convert is true, values that look like numbers or booleans will be converted and empty strings won’t be added to the object.
 	**/
